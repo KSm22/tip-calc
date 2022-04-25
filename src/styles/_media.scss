@@ -1,0 +1,124 @@
+@media screen and (max-width: 1080px) {
+  //header
+
+  .header {
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    .container {
+      display: block;
+      height: auto;
+    }
+
+    &__banner {
+      float: none;
+      text-align: center;
+      margin: 0 auto;
+    }
+  }
+
+
+  // Table
+  #output-table th, #output-table tr:nth-of-type(1), .output-table th, .output-table tr:nth-of-type(1) {
+    display: none;
+  }
+
+  #output-table tr, .output-table tr {
+    display: block;
+    padding: 10px;
+  }
+
+  #output-table td, .output-table td {
+    border-bottom: 1px dotted rgba(0,0,0,.3);
+    margin-bottom: 5px;
+    display: block;
+    text-align: right;
+  }
+
+  #output-table td::before, .output-table td::before {
+    content: attr(data-label);
+    float: left;
+    color: $text-branded;
+    text-transform: uppercase;
+    font-size: 12px;
+    vertical-align: bottom;
+    line-height: 24px;
+  }
+
+  #output-table td, .output-table td {
+    text-align: right;
+  }
+
+  // Footer
+
+  .footer-wrapper {
+    flex-direction: column-reverse;
+  }
+
+  .footer {
+    &__group {
+      width: 100%;
+      max-width: 500px;
+      justify-content: center;
+      margin: 0 auto;
+      margin-bottom: 1em;
+
+      ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+          padding: .25em 1em;
+        }
+      }
+    }
+
+    .text-center {
+      text-align: center;
+    }
+  }
+}
+
+
+@media screen and (max-width: 600px) {
+  .calc-form {
+    &__field {
+      width: 100%;
+      margin-bottom: 0;
+    }
+  }
+
+  .output {
+    width: 100%;
+    margin-bottom: 0;
+  }
+
+  .calc-output-group {
+    padding-bottom: 20px;
+  }
+
+  .output-area {
+    .react-tabs__tab-list {
+      flex-direction: column;
+    }
+
+    .react-tabs__tab {
+      margin-bottom: 6px;
+
+      font-size: 12px;
+
+      border: 1px solid $border-branded;
+    }
+  }
+}
+
+
+@media screen and (min-width: 600px){
+  #output-table td, .output-table td {
+    padding: .5em;
+  }
+}
